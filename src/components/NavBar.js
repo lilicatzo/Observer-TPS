@@ -1,32 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+    const [expanded, setExpanded] = useState(false);
+
+    const closeNav = () => setExpanded(false);
+
     return (
-        <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: 'black', backdropFilter: 'blur(10px)', boxShadow: '0 2px 4px rgba(0,0,0,0.1)' }}>
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/" style={{ color: 'white' }}>Observer TPS</Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav ms-auto">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/Home" style={{ color: 'white' }}>Home</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/election-data" style={{ color: 'white' }}>Election Data</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/predictions" style={{ color: 'white' }}>Predictions</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/news" style={{ color: 'white' }}>News</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" expanded={expanded} style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
+            <Navbar.Brand as={Link} to="/" onClick={closeNav}>Observer TPS</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(!expanded)} />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ms-auto">
+                    <Nav.Link as={Link} to="/Home" onClick={closeNav}>Home</Nav.Link>
+                    <Nav.Link as={Link} to="/election-data" onClick={closeNav}>Election Data</Nav.Link>
+                    <Nav.Link as={Link} to="/predictions" onClick={closeNav}>Predictions</Nav.Link>
+                    <Nav.Link as={Link} to="/news" onClick={closeNav}>News</Nav.Link>
+                    {/* Add this new Nav.Link for Twitter API */}
+                    <Nav.Link as={Link} to="/tweets" onClick={closeNav}>Tweets</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 };
 
