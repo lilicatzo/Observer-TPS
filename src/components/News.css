@@ -1,0 +1,99 @@
+body {
+    background-image: url('./images/home_background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.news-container {
+    background-color: rgba(9, 30, 45, 0.8); /* Dark background color */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+}
+
+.news-title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: black;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+.btn-primary {
+    background-color: rgba(0, 86, 179, 0.6); /* Slightly dark blue with glass effect */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Initial glassy effect */
+}
+
+.btn-primary:hover {
+    background-color: rgba(0, 56, 143, 0.8); /* Dark blue color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced glassy effect on hover */
+    color: white;
+}
+
+#observerElement {
+    height: 10px;
+    visibility: hidden;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #b2ceeb;
+    transform: translateY(-5px);
+}

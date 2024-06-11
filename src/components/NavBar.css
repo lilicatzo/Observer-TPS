@@ -1,0 +1,50 @@
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.1); /* More transparency to blend with background */
+    backdrop-filter: blur(5px); /* Apply background blur */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding-left: 15px;
+    z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+.navbar-brand {
+    font-weight: 700; /* Bold */
+    font-size: 24px; /* Font size */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    color: #fff !important; /* Text color */
+    padding-left: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add drop shadow */
+}
+
+.nav-link {
+    font-weight: 400; /* Normal */
+    font-size: 18px; /* Font size */
+    padding: 10px 15px; /* Padding */
+    transition: color 0.3s; /* Transition for smooth color change */
+    text-decoration: none !important; /* Remove underline */
+    color: #fff !important; /* Default text color */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Add drop shadow */
+}
+
+.nav-link:hover {
+    color: rgba(255, 255, 255, 0.7) !important; /* Change text color with increased transparency on hover */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Toggler icon color */
+}
+
+.navbar-collapse {
+    justify-content: flex-end; /* Align items to the right */
+    padding-right: 15px;
+}
+
+.custom-navbar {
+    transition: background-color 0.3s ease;
+}
+
+.custom-navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.7); /* Adjust the opacity as needed */
+}
