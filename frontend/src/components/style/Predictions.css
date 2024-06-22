@@ -1,0 +1,77 @@
+body {
+  background-image: url('../images/home_background.jpg');
+}
+
+.election-data-container {
+  background-color: rgba(9, 30, 45, 0.8); /* Dark background color */
+  padding: 20px;
+  border-radius: 8px;
+  color: white; /* Set text color to white */
+}
+
+.pie-chart-container {
+  display: flex;
+  flex-direction: row; /* Align the legend next to the pie chart */
+  justify-content: center;
+  align-items: center;
+}
+
+.pie-chart {
+  margin-right: 40px; /* Space between pie chart and legend */
+}
+
+.legend-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.candidates-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.candidate {
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+/* Karena Anies image nya lbh kecil */
+.candidate_anies {
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.candidate img {
+  width: 300px;
+  height: auto;
+}
+
+/* Karena Anies image nya lbh kecil */
+.candidate_anies img { 
+  width: 320px;
+  height: auto;
+}
+
+.candidate:hover {
+  transform: scale(1.1);
+}
+
+.vote-badge {
+  margin-top: 10px; /* Add space between the image and the badge */
+}

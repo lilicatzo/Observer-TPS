@@ -1,0 +1,70 @@
+/* ComplaintForm.css */
+body {
+    background-image: url('../images/home_background.jpg');
+}
+
+.complaint-container {
+    background-color: rgba(9,30,45, 0.8); /* Dark background color */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.complaint-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.complaint-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.complaint-container label {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.complaint-container textarea, 
+.complaint-container input[type="file"] {
+    margin-bottom: 0.5rem; /* Decrease margin for shorter input fields */
+    border-radius: 5px;
+    padding: 8px; /* Decrease padding for smaller input fields */
+    width: 100%; /* Full width */
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background with some opacity */
+    border: 1px solid rgba(255, 255, 255, 0.3); 
+    color: white; /* Text color */
+}
+
+.complaint-container .error-message {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+.complaint-container .success-message {
+    color: green;
+    margin-bottom: 1rem;
+}
+
+.complaint-container button {
+    background-color: rgba(35, 64, 180, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px; /* Less round edges */
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%; /* Wider button */
+    border: none; /* Remove default button border */
+    font-size: 16px; /* Increase font size */
+    color: rgb(253, 253, 253); /* Text color for better visibility */
+}
+
+.complaint-container button:hover {
+    background-color: rgba(13, 0, 52, 0.8); /* Change background on hover for better visual feedback */
+}

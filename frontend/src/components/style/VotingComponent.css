@@ -1,0 +1,34 @@
+.candidate-card {
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .candidate-image {
+    width: 100%;
+    height: 350px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images fill the space without distortion */
+  }
+  
+  .card-body {
+    height: 150px; /* Set a fixed height for the card body */
+    overflow: hidden; /* Hide overflow content */
+  }
+  
+  .vote-badge {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .vote-label {
+    margin-right: 5px;
+  }
+  
+  .vote-count {
+    font-weight: bold;
+  }
+  
+  .candidate-card {
+  cursor: pointer;
+}
+
